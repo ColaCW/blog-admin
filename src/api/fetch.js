@@ -1,6 +1,6 @@
 import axios from 'axios';
-import router from '@/router/router.js';
-import { removeToken, removeUser, getToken } from '@/api/auth.js';
+import router from '@/router/index.js';
+import { removeToken, removeUser, getToken } from '@/assets/js/auth.js';
 import { Notification } from 'element-ui';
 
 const codeMessage = {
@@ -29,13 +29,13 @@ const instance = axios.create({
 // 异常处理程序
 const errorHandler = error => {
   const { response = {} } = error;
-  const errortext = codeMessage[response.data.status];
+  const errortext = codeMessage[response.data.resultCode];
   Notification.error({
     title: `${response.data.message}`,
     message: errortext
   });
   // token无效或者过期，跳至登录界面
-  if (response.data.status === 401) {
+  if (response.data.resultCode === 401) {
     removeToken();
     removeUser();
     setTimeout(() => router.push({ path: '/login' }), 100);
@@ -55,7 +55,7 @@ instance.interceptors.request.use(config => {
 
 // 响应拦截
 instance.interceptors.response.use(({ data }) => {
-  if (data.status === 200) {
+  if (data.resultCode === 200 || data.status === 200) {
     return data;
   }
 }, errorHandler);
