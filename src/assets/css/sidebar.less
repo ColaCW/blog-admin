@@ -1,0 +1,117 @@
+@import '../fonts/sidebar/iconfont.css';
+.sidebar,
+.el-menu--vertical {
+  /* 侧栏菜单导航 */
+  .el-menu {
+    font-size:14px;
+    border: none;
+    height: 100%;
+    width: 100% !important;
+    .el-menu-item {
+      height: 35px;
+      line-height: 35px;
+      /* 文本溢出截断 */
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .el-submenu {
+      & [class^='el-icon-'],
+      & [class^='iconfont icon-'] {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+        width: 24px;
+        text-align: center;
+        font-size: 18px;
+      }
+      .el-submenu__title {
+        i{ color:@menuText; font-size: 18px;  margin-right:5px;}
+        height: 35px;
+        line-height: 35px;
+        span{ font-size: 14px;}
+        &:hover {
+          background-color: @menuHover !important;
+        }
+        .el-submenu__icon-arrow{ display:none}
+      }
+      .el-menu-item {
+        padding-right: @modulePadding !important;
+        background-color: @subMenuBg !important;
+        span{ font-size:14px;}
+        &:hover {
+          background-color: @subMenuHover !important;
+        }
+        &.is-active {
+          color: @subMenuActiveText !important;
+          background-color: @subMenuHover !important;
+        }
+      }
+    }
+  }
+  /* 不包含 我的收藏/常用导航 */
+  .side-menu {
+    .el-menu {
+      .is-active {
+        & > .el-submenu__title {
+          color: @subMenuActiveText !important;
+          i {
+            color: @subMenuActiveText !important;
+           
+          }
+        }
+      }
+    }
+  }
+  /* 侧栏菜单导航 end */
+}
+
+//登录样式
+.login_right {
+  .el-tabs__header {
+    margin: 40px 140px 20px;
+  }
+  .login-container input {
+    border: 0;
+  }
+  .el-tabs__item {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .el-tabs__nav-wrap::after {
+    background-color: #fff;
+  }
+}
+
+
+//修改工作流样式
+.tablieList {
+    .el-form-item {
+        margin-bottom: 10px;
+    }
+    .el-table__expanded-cell[class*=cell] {
+        padding: 10px 20px;
+    }
+    .el-table td, .el-table th {
+        padding: 8px 0;
+    }
+}
+
+.djs-context-pad .entry.bpmn-icon-screw-wrench { //小扳手节点
+    display: none;
+}
+.djs-context-pad .entry.bpmn-icon-intermediate-event-none { //中间节点
+    display: none;
+}
+/*.djs-context-pad .entry.bpmn-icon-text-annotation { //注释框节点
+    display: none;
+}*/
+.djs-context-pad .entry.bpmn-icon-task { //任务节点
+    display: none;
+}
+.djs-context-pad .entry.bpmn-icon-gateway-none { //分支条件节点
+    display: none;
+}
+.djs-context-pad .entry.bpmn-icon-end-event-none { //结束节点
+    display: none;
+}

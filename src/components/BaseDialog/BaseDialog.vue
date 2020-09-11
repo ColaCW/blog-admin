@@ -131,12 +131,13 @@ export default {
   /deep/ .el-dialog {
     margin: 0 auto;
     .el-dialog__header {
-      padding: 15px 15px 10px 15px;
+      padding: 12px 15px;
       box-sizing: border-box;
-      border-bottom: 1px solid #d9d9d9;
+      color: #fff;
+      background: linear-gradient(90deg, #1e6ad4, #a6c4ed);
       .el-dialog__title {
         font-size: 16px;
-        color: #4d4d4d;
+        color: #fff;
         line-height: inherit;
       }
       .el-dialog__headerbtn {

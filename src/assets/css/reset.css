@@ -1,0 +1,257 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1; font-size: 12px;
+}
+ol,
+ul {
+  list-style: none;
+}
+li{ list-style: none;}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.el-input__inner{ border-radius: 0px !important;}
+.el-button{ border-radius: 0px !important;  height: 30px; line-height: 30px; padding-top: 0px !important; 
+   padding-bottom: 0px !important; 
+   user-select: text !important;
+   -moz-user-select: text !important;
+   -webkit-user-select: text !important;
+   -ms-user-select: text !important; }
+.el-button--text{
+  min-width:2px !important;
+  color: #1c69d5 !important;
+  user-select: text !important;
+  -moz-user-select: text !important;
+  -webkit-user-select: text !important;
+  -ms-user-select: text !important;
+}
+.el-button--text::before{ padding-right:3px; font-size: 14px; color: #4d4d4d; font-weight: 400; }
+.el-button--primary, .el-button--info{ min-width: 132px;}
+.table-wrapper{ padding-top: 0px !important;}
+
+.el-tabs .el-tabs__header{ margin-bottom: 0px;}
+.el-tabs .el-tabs__item{ height: 32px;line-height: 28px; }
+.el-tabs .table-wrapper{padding: 0px;}
+.el-tabs .el-tabs__nav-wrap::after{ height: 2px !important;}
+.noPadding .top-filter{ padding:0px; margin: 10px 0 0 0;}
+.noPaddingM .top-filter{ padding:0px; margin: 0px;}
+.noPadding .table-wrapper{ padding:0px;}
+.treeClass  {border: #ddd solid 1px;background: #fafafa;}
+.treeClass  .el-tree{ padding: 0px 5px; }
+.el-tree-node .el-tree-node__content{ border-bottom: #ddd solid 1px;}
+.form-panel .el-col .el-form-item .el-form-item__label{padding-right: 5px !important;}
+
+.lazyLoadTab .el-tabs__header {margin: 0px !important;}
+.lazyLoadTab .el-tabs__nav-wrap{ padding-left: 0px !important;}
+.lazyLoadTab .el-tabs__nav-wrap .el-tabs__item{ font-size: 12px !important;}
+.lazyLoadTab .el-tabs__nav-wrap .el-tabs__item.is-active{ font-size: 13px !important; font-weight: bold}
+.el-checkbox-group{ font-size: 12px !important;}
+.el-radio-group{ font-size: 12px !important;}
+.el-input__prefix{left:-1px !important;}
+.el-date-editor .el-input__inner{padding-left: 20px !important;}
+.el-range-editor.el-input__inner {padding-left: 5px !important;}
+.table-wrapper .el-table__header thead > tr > th{ background-color: rgb(230, 230, 230,1);}
+.el-loading-spinner i {
+    color: #1890ff;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.kaifazhong {
+  text-align: center;
+  font-size: 26px;
+  padding-top: 30vh;
+}
+.el-checkbox__inner{ border-radius: 0px !important}
+
+
+.el-loading-mask{
+    background-color: rgba(0, 0, 0, 0.2) !important
+}
+.infoBody{ overflow: hidden;  display: flex; height: 100%; flex-direction: column;}
+.infoScrollBox{ flex: 1; overflow-x: scroll;}
+.infoScrollBox::-webkit-scrollbar { width: 0px;  height: 0px; }
+.centerBtn{  text-align: center; height:40px; padding-top: 10px;}
+.el-input-number__decrease, .el-input-number__increase{ border-bottom: 1px solid transparent !important; border-left: 1px solid transparent  !important; background:transparent !important} 
+.el-input-number__increase{ top:3px  !important;}
+.el-icon-arrow-up, .el-icon-arrow-down{ font-size: 12px  !important;  font-weight: bold  !important}
+.el-popover{ min-width: 50px !important;background: #fff;}
+.dialogBottom{
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        padding: 10px 20px 10px 20px;
+        background: #ffffff;
+        text-align: center;
+        z-index: 100;
+      }
+.drawerBottom{
+        text-align: right;
+      }
+.dw .el-button--text{ padding-left: 10px;}
+.el-input-number__decrease.is-disabled{  opacity:0.3 !important}
+.el-button.is-disabled{  opacity:0.3 !important}
+.el-tooltip__popper{font-size: 12px; max-width:50%;
+  position: relative;
+  font-size: 12px !important; 
+    background: #fff;
+    border-radius: 2px;
+     -webkit-box-shadow: #ddd 0px 0px 5px;
+  -moz-box-shadow: #ddd 0px 0px 5px;
+  box-shadow: #ddd 0px 0px 5px;
+  line-height: 25px; 
+  padding: 3px 8px; 
+  color: #333 !important; 
+   } 
+.el-tooltip__popper.is-dark {
+    background: #ffffff !important;
+}
+.el-tooltip__popper .popper__arrow
+.el-select-dropdown{ border-radius: 0px !important;}
+.shadow {
+  border: #ddd solid 1px;
+  -webkit-box-shadow: #d1d1d1 0px 0px 3px;
+  -moz-box-shadow: #d1d1d1 0px 0px 3px;
+  box-shadow: #d1d1d1 0px 0px 3px;
+  padding: 10px;
+}
+.el-icon-arrow-up{color: #8E8E8E  !important;}
+.el-textarea__inner{ min-height: 30px !important;}
+.el-input-group__append, .el-input-group__prepend{ border-radius: 0px !important;}
+.el-textarea__inner{ border-radius: 0px !important; padding:3px !important;}
+.el-table--mini th,.el-table--mini td { padding:0px !important;}
+.el-dialog{ min-width: 320px;}
+.el-tree-node__label{ font-size: 14px;}
+.el-image-viewer__close .el-icon-circle-close{ color: #fff}
+.el-message-box__message p{word-break: break-all; widows: 100%;}
+.el-select .el-input .el-select__caret{line-height: 28px; height: 28px;}
+.m10{ margin: 10px;}
+.mt10{ margin-top: 10px;}
+.mr10{ margin-right: 10px;}
+.mb10{ margin-bottom: 10px;}
+.ml10{ margin-left: 10px;}
+
+.p10{ padding: 10px;}
+.pt10{ padding-top: 10px;}
+.pr10{ padding-right: 10px;}
+.pb10{ padding-bottom: 10px;}
+.pl10{ padding-left: 10px;}
+
+.pl20{ padding-left: 10px;}

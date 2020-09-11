@@ -5,6 +5,9 @@
 </template>
 
 <script>
+import '@/assets/css/reset.css';
+import '@/assets/css/style.less';
+import '@/assets/fonts/iconfont.css';
 export default {
   name: 'app'
 };

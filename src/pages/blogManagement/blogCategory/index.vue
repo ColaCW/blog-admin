@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import { search, del, deleteBatch } from '@/api/blogManagement/blogCategory/index';
+import { search, getById, add, alter, del, deleteBatch } from '@/api/blogManagement/blogCategory/index';
 
 export default {
   name: 'blogCategory',
@@ -91,7 +91,7 @@ export default {
         {
           title: '操作',
           dataIndex: 'column-action',
-          width: 60,
+          width: 80,
           render: props => {
             return (
               <div>
@@ -115,11 +115,8 @@ export default {
           dataIndex: 'name'
         },
         {
-          title: '状态',
-          dataIndex: 'status',
-          render: props => {
-            return <span>{props.row.status ? '已发布' : '未发布'}</span>;
-          }
+          title: '是否有效',
+          dataIndex: 'isValid'
         },
         {
           title: '备注',
@@ -127,8 +124,7 @@ export default {
         },
         {
           title: '创建时间',
-          dataIndex: 'createdAt',
-          dateFormat: 'yyyy-MM-dd HH:mm:ss'
+          dataIndex: 'createdAt'
         }
       ];
     },
@@ -163,18 +159,18 @@ export default {
         }
       ];
     },
-    changeHandle1(val) {
-      this.saveObj = Object.assign(this.saveObj, val);
-      this.formSubmit1 = true;
-    },
     // 打开详情弹框
     openDetail(id) {
       if (id) {
         this.title = '编辑';
+        getById(id).then(res => {
+          console.log(res);
+          this.detailDialogVisible = true;
+        });
       } else {
         this.title = '新增';
+        this.detailDialogVisible = true;
       }
-      this.detailDialogVisible = true;
     },
     // 删除
     del(id) {

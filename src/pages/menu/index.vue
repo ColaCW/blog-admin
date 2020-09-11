@@ -7,16 +7,18 @@
         </div>
         <el-menu class="el-menu-box" style="height: 94%" background-color="#272b2e" text-color="rgba(255, 255, 255, 0.65)">
           <template v-for="(menu, index) in menus">
-            <template v-if="menu.parentId == 0 && menu.hide === 0">
+            <template v-if="menu.parentId == 0 && menu.isValid == 10041001">
               <el-submenu :key="menu.id" :index="menu.name">
                 <template slot="title">
                   <i :class="index == 0 ? 'el-icon-location' : 'el-icon-menu'"></i>
                   <span>{{ menu.name }}</span>
                 </template>
                 <el-menu-item-group>
-                  <template v-for="menu1 in menus">
-                    <template v-if="menu1.parentId == menu.id && menu1.hide === 0">
-                      <el-menu-item :key="menu1.id" :index="menu1.name" @click="goMenu(menu1.href, menu1.name)">&nbsp;&nbsp;&nbsp;&nbsp;<i class="el-icon-star-off"></i>{{ menu1.name }}</el-menu-item>
+                  <template v-for="subMenu in menus">
+                    <template v-if="subMenu.parentId == menu.id && subMenu.isValid == 10041001">
+                      <el-menu-item :key="subMenu.id" :index="subMenu.name" @click="goMenu(subMenu.href, subMenu.name)"
+                        >&nbsp;&nbsp;&nbsp;&nbsp;<i class="el-icon-star-off"></i>{{ subMenu.name }}</el-menu-item
+                      >
                     </template>
                   </template>
                 </el-menu-item-group>
@@ -69,27 +71,23 @@ export default {
   },
   methods: {
     init() {
-      let that = this;
       getMenusByRole().then(res => {
-        that.menus = res.data;
+        this.menus = res.data;
       });
     },
     logout: function() {
-      let that = this;
-      that.$router.push('/Login');
+      this.$router.push('/Login');
     },
     goTopMenu: function(tab, event) {
-      let that = this;
-      that.chooseTopIndex = tab.index;
-      that.$router.push(that.topMenus[that.chooseTopIndex].href);
-      that.$forceUpdate();
+      this.chooseTopIndex = tab.index;
+      this.$router.push(this.topMenus[this.chooseTopIndex].href);
+      this.$forceUpdate();
     },
     goMenu: function(href, name) {
-      let that = this;
       let flag = false;
-      for (let i = 0; i < that.topMenus.length; i++) {
-        if (href === that.topMenus[i].href) {
-          that.chooseTopIndex = i;
+      for (let i = 0; i < this.topMenus.length; i++) {
+        if (href === this.topMenus[i].href) {
+          this.chooseTopIndex = i;
           flag = true;
           break;
         }
@@ -99,12 +97,12 @@ export default {
           name: name,
           href: href
         };
-        that.topMenus.push(data);
-        that.chooseTopIndex = that.topMenus.length - 1;
+        this.topMenus.push(data);
+        this.chooseTopIndex = this.topMenus.length - 1;
       }
-      that.activeMenu = name;
-      that.$router.push(href);
-      that.$forceUpdate();
+      this.activeMenu = name;
+      this.$router.push(href);
+      this.$forceUpdate();
     }
   }
 };

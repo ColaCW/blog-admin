@@ -1,0 +1,156 @@
+@import './sidebar.less';
+
+/**
+ * app style
+ */
+.el-notification {
+  a {
+    color: @primaryColor;
+    text-decoration: underline;
+  }
+}
+
+.el-input--small .el-input__inner{
+  border:none;
+  background-color: transparent;
+  display: inline;
+}
+
+table{
+  width:100%;
+  // overflow-x: scroll;
+}
+
+.thead{
+  // display:fixed;
+  border:none;
+  th{
+    border:none;
+    padding:0px 5px 0px 5px;
+    font-size:12px;
+    font-weight: 600;
+    vertical-align: middle;
+    height:30px;
+  }
+  tr:first-child th:first-child{
+    font-size: 16px;
+    font-weight: 600;
+    width: 250px;
+  }
+  th:first-child{
+    text-align: left;
+    padding-left:10px;
+  }
+}
+
+.columnLabel{
+  font-size: 13px;
+  font-weight: 600;
+}
+
+tbody{
+  font-size: 13px;
+  td{
+    border:1px solid @borderColor;
+    padding:0px;
+    vertical-align: middle;
+    height:30px;
+    border-collapse: collapse;
+  }
+  td:first-child{
+    text-align: left;
+    padding-left:10px;
+  }
+}
+
+.el-input.is-disabled .el-input__inner{
+  border-color:transparent;
+  background-color:transparent;
+}
+
+.tableTitle{
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.cellTitle{
+  border:none;
+  width:250px;
+  font-weight: 600;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border-bottom:2px solid #000;
+}
+
+.cellTitleLarge{
+  border:none;
+  width:250px;
+  font-weight: 600;
+  font-size:16px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border-bottom:2px solid #000;
+}
+
+.celllabel{
+  border:none;
+  width:250px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border-bottom:1px dashed #000;
+
+}
+
+.computedInput{
+  background-color: #E6E6FF;
+}
+
+.mappingInput{
+  background-color: #FFFFCC;
+}
+
+.writeInput{
+  background-color: #FFCC99;
+}
+
+.totalInput{
+  background-color: #fff;
+}
+
+.darkInput{
+  background-color: #ddd;
+}
+
+.grayInput{
+  background-color: #E9EDEA;
+}
+
+.text-indent2{
+  text-indent:1em;
+}
+
+.text-indent3{
+  text-indent:2em;
+}
+
+.text-indent4{
+  text-indent:3em;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.border-none{
+  border: none !important;
+  border: 0px !important;
+}
+
+.vertical_center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,70 @@
+
+/* 财务云 */
+/* 新增 */
+.slot-wrapper .el-button--text{
+  background-color: red !important;
+  color: #fff !important;
+  border-radius: 4px !important;
+  padding: 15px;
+}
+.slot-wrapper  .el-button i{
+  color: #fff;
+}
+/* 筛选 */
+.el-dropdown .el-button--text{
+  background-color: #FFF !important;
+  color: #000 !important;
+}
+.el-checkbox__input.is-checked .el-checkbox__inner{
+  background-color: #4d4d4d;
+  border-color: #FFF;
+}
+
+.el-dropdown-menu .el-checkbox__input.is-checked+.el-checkbox__label
+{
+  color: #FFF;
+}
+.el-dropdown-menu .initClass,
+.el-dropdown-menu .columns-dropdown{
+  color: #606266;
+}
+
+/* 搜索框 */
+.el-select-dropdown__item.selected{
+  color: #4d4d4d !important;
+}
+.el-button--primary{
+  background-color: red !important;
+  border-color: red !important;
+}
+.el-button--info{
+  background-color: #909399 !important;
+  border-color: #909399 !important;
+}
+.el-select .el-input__inner:focus,
+.el-select .el-input.is-focus .el-input__inner, 
+.el-input__inner:hover,
+.el-input__inner:focus{
+  border-color: #909399 !important;
+}
+/* 分页 */
+.el-pagination.is-background .el-pager li:not(.disabled).active{
+  background-color: #909399 !important;
+}
+.pagination .el-pagination__sizes .el-input .el-input__inner:hover,
+.pagination .el-pagination__sizes .el-input__inner:focus,
+.pagination .el-pagination__sizes .el-input.is-focus .el-input__inner, 
+.el-pagination__editor .el-input__inner:hover,
+.el-pagination__editor .el-input__inner:focus
+{
+  border-color: red !important;
+}
+
+
+/* 排序 */
+.el-table .descending .sort-caret.descending{
+  border-top-color: red !important;
+}
+.el-table .ascending .sort-caret.ascending{
+  border-bottom-color: red !important;
+}
