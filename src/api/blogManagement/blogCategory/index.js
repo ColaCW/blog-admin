@@ -11,7 +11,7 @@ export const getById = id => axios.get(`${SERVER.SERVICE_HOST}/admin/blogCategor
 export const add = params => axios.post(`${SERVER.SERVICE_HOST}/admin/blogCategory/add`, params);
 
 // 进行数据修改
-export const alter = params => axios.post(`${SERVER.SERVICE_HOST}/admin/blogCategory/alter`, params);
+export const alter = params => axios.post(`${SERVER.SERVICE_HOST}/admin/blogCategory/alter/${params.id}`, params);
 
 // 根据id删除对象
 export const del = id => axios.post(`${SERVER.SERVICE_HOST}/admin/blogCategory/del/${id}`);
